@@ -19,6 +19,10 @@ void main() {
 
   var listaDadosPacientes = [];
   var listaPacientesAcimaDeVinte = [];
+  var listaDesenvolvedores = [];
+  var listaEstudantes = [];
+  var listaDentista = [];
+  var listaJornalista = [];
   var countDesenvolvedor = 0;
   var countEstudante = 0;
   var countDentista = 0;
@@ -34,37 +38,47 @@ void main() {
   //* 1 - PACIENTES ACIMA DE 20 ANOS
 
   for (var paciente in listaDadosPacientes) {
-    if (int.parse(paciente[1]) > 20) {
+    var idade = int.tryParse(paciente[1]) ?? 0;
+    if (idade > 20) {
       listaPacientesAcimaDeVinte.add(paciente);
     }
   }
-  print('\n1 - Apresente os pacientes com mais de 20 anos e print o nome deles.');
+  print(
+      '\n1 - Apresente os pacientes com mais de 20 anos e print o nome deles.');
   print('1 - Os seguintes pacientes são maiores de 20 anos:');
   for (var nome in listaPacientesAcimaDeVinte) {
-    print('Nome do paciente: ${nome[0]}');
+    print('${nome[0]}');
   }
 
   //* 2 - NÚMERO DE PACIENTES POR PROFISSÃO
   for (var paciente in listaDadosPacientes) {
     if (paciente[2].toString().toLowerCase() == 'desenvolvedor') {
       countDesenvolvedor += 1;
+      listaDesenvolvedores.add(paciente[0]);
     } else if (paciente[2].toString().toLowerCase() == 'estudante') {
       countEstudante += 1;
+      listaEstudantes.add(paciente[0]);
     } else if (paciente[2].toString().toLowerCase() == 'dentista') {
       countDentista += 1;
+      listaDentista.add(paciente[0]);
     } else if (paciente[2].toString().toLowerCase() == 'jornalista') {
       countJornalista += 1;
+      listaJornalista.add(paciente[0]);
     }
   }
-  print('\n2 - Apresente quantos pacientes existem para cada profissão (desenvolvedor, estudante, dentista, jornalista)');
+  print(
+      '\n2 - Apresente quantos pacientes existem para cada profissão (desenvolvedor, estudante, dentista, jornalista)');
   print('2 - Dentre a lista de pacientes tem-se: ');
-  print('$countDesenvolvedor desenvolvedores.');
-  print('$countEstudante estudantes.');
-  print('$countDentista dentistas.');
-  print('$countJornalista jornalistas.');
+  print('\n$countDesenvolvedor Desenvolvedores:');
+  listaDesenvolvedores.forEach(print);
+  print('\n$countEstudante Estudantes:');
+  listaEstudantes.forEach(print);
+  print('\n$countDentista Dentistas:');
+  listaDentista.forEach(print);
+  print('\n$countJornalista Jornalistas:');
+  listaJornalista.forEach(print);
 
-
-  //* NÚMERO DE PACIENTES QUE MORAM EM SP
+  //* 3 - NÚMERO DE PACIENTES QUE MORAM EM SP
   for (var paciente in listaDadosPacientes) {
     if (paciente[3].toString().toLowerCase() == 'sp') {
       countPacientesDeSP += 1;
