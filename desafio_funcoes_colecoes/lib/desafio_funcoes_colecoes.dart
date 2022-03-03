@@ -1,5 +1,6 @@
 import 'package:desafio_funcoes_colecoes/funcoes/contar_pessoas_sexo.dart';
 import 'package:desafio_funcoes_colecoes/funcoes/filtro_por_idade.dart';
+import 'package:desafio_funcoes_colecoes/funcoes/pessoa_mais_velha.dart';
 import 'funcoes/remover_duplicados.dart';
 
 void main() {
@@ -40,5 +41,6 @@ void main() {
   filtrarPessoasPorIdade(listaNova);
 
   print('4 - Encontre a pessoa mais velha e apresente o nome dela.');
+  pessoaMaisVelha(listaNova);
 }
 
