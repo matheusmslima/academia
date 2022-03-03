@@ -2,7 +2,6 @@ void pessoaMaisVelha(List<String> dadosPessoas) {
   var dadosPessoasLocal = [...dadosPessoas];
   var idades = [];
   var listaDados = [];
-  var listaSorteada = [];
 
   for (var dado in dadosPessoasLocal) {
     listaDados.add(dado.split('|'));
@@ -16,7 +15,7 @@ void pessoaMaisVelha(List<String> dadosPessoas) {
   }
   idades.sort();
   var idMaisVelha = idades.last;
-  var pessoaMaisVelha = listaDados.forEach((element) {
+  listaDados.forEach((element) {
     if (element[1] == idMaisVelha) {
       print('${element[0]}');
     }
