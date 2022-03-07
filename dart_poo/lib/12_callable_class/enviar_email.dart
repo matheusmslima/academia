@@ -5,6 +5,7 @@ class EnviarEmail {
   }
 
   bool enviar(String email) {
+    print('Chamando método enviar.');
     return true;
   }
 }

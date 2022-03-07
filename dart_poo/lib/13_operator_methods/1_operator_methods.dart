@@ -5,8 +5,10 @@ void main() {
   var num2 = Numero(20);
   
   var totalSoma = num1 + num2;
+  print(totalSoma);
   print(totalSoma.i);
 
   var totalSub = num1 - num2;
+  print(totalSub);
   print(totalSub.i);
 }
