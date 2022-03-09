@@ -16,8 +16,13 @@ Future<void> atualizarPost() async {
     'body': 'Descricao do post',
     'userId': 1
   };
-  var response =
-      await http.put(Uri.parse(url), body: convert.jsonEncode(mapaRequest));
+  var response = await http.put(
+    Uri.parse(url),
+    body: convert.jsonEncode(mapaRequest),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  );
   print(response.statusCode);
   print(response.body);
 }
