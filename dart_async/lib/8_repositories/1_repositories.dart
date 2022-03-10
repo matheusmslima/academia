@@ -11,6 +11,7 @@ Future<void> main() async{
 
     var user = await userRepository.findAllUsers(164654654);
 
+    //* Mais simples
     print(user?.name ?? 'Usuário não encontrado.');
 
     // if(user != null){
