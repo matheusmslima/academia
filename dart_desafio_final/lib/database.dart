@@ -9,7 +9,7 @@ class Database {
       port: 3306,
       user: 'matheusmslima',
       password: 'barret50',
-      db: 'test'
+      db: 'dart_desafio_final'
     );
 
     return MySqlConnection.connect(settings);
