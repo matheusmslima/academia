@@ -12,19 +12,22 @@ Future<void> main() async {
   // buscarEstado();
   final database = Database();
   var mySqlConnection = await database.openConnection();
-  Future.delayed(Duration(seconds: 1));
+
+
+  //! --------- PAREI AQUI --------- //
+  await Future.delayed(Duration(seconds: 5));
+  var resultado = await mySqlConnection
+      .query('insert into cidade(id, id_uf, nome) values(?,?,?)', [
+    null,
+    null,
+    'Matheus',
+  ]);
 
   print(mySqlConnection.toString());
 
   // print(mySqlConnection);
-  // var resultado = await mySqlConnection
-  //     .query('insert into cidade(id, id_uf, nome), values(?,?,?)', [
-  //   null,
-  //   2,
-  //   'Matheus',
-  // ]);
 
-  // print(resultado.affectedRows);
+  print(resultado.affectedRows);
   // // for (var i = 0; i < cidades.length; i++) {
   //   var resultado =
   //       mySqlConnection.query('insert into cidade(id, id_uf, nome) values(?,?,?)', [
