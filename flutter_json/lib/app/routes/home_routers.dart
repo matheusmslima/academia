@@ -9,7 +9,7 @@ class HomeRouters {
   static final routers = <GetPage>[
     GetPage(
       name: '/home',
-      page: () => HomeView(),
+      page: () => const HomeView(),
       binding: HomeBindings(),
     ),
   ];

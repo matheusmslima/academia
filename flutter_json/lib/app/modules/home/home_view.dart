@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_json/app/modules/home/home_controller.dart';
 import 'package:get/get.dart';
 
@@ -15,15 +14,15 @@ class HomeView extends GetView<HomeController> {
           itemCount: controller.userList.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              leading: const Icon(Icons.plus_one),
-              trailing: const Icon(Icons.abc_sharp),
-              title: Text('List item $index'),
+              leading: const Icon(Icons.person_add_sharp),
+              title: Text('Name: ${controller.userList[index]}'),
             );
           },
         );
       }),
       floatingActionButton: FloatingActionButton(
-        onPressed: controller.addUser,
+        onPressed: controller.addNewUser,
+        child: const Icon(Icons.add),
       ),
     );
   }
