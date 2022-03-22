@@ -15,7 +15,7 @@ class LockPage extends GetView<LockController> {
         backgroundColor: const Color.fromARGB(255, 255, 0, 0),
         foregroundColor: const Color.fromARGB(255, 255, 255, 255),
         elevation: 1,
-        title: const Text('LockView'),
+        title: const Text('Página de bloqueio'),
         centerTitle: true,
       ),
       body: Container(

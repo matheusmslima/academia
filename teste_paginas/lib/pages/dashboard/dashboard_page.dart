@@ -51,11 +51,11 @@ class DashboardPage extends StatelessWidget {
             items: [
               _bottomNavigationBarItem(
                 icon: Icons.home,
-                label: 'Home',
+                label: 'Dados',
               ),
               _bottomNavigationBarItem(
                 icon: Icons.bluetooth,
-                label: 'Bluetooth',
+                label: 'Dispositivos',
               ),
               _bottomNavigationBarItem(
                 icon: Icons.list,
